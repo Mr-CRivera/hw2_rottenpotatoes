@@ -1,3 +1,12 @@
+Fork del ejercicio de ejemplo de programación RoR RottenPotatoes de Cristóbal Rivera
+
+- Ejemplo de CRUD sobre esquema de BDD
+- Ejemplo de páginas HAML
+- Ejemplo de maquetación Saas
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
