@@ -7,6 +7,9 @@ class MoviesController < ApplicationController
   end
 
   def index
+    if params[:format]!= nil 
+      self.instance_variable_set ("@hilite_"+params[:format]).to_sym, "hilite"
+    end
     @movies = Movie.all :order => (params[:format])
   end
 
