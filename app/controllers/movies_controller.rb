@@ -1,7 +1,5 @@
 class MoviesController < ApplicationController
 
-  @first = true
-
   def show
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
@@ -17,18 +15,9 @@ class MoviesController < ApplicationController
     end
     
     @all_ratings = Movie.ratings
-    if @first then 
-       @rat_selecc = {}
-       @all_ratings.each do |rat|
-         @rat_selecc[rat] = 1
-       end
-       @first = false
-    else
-       @rat_selecc = params[:ratings]
-    end
+    @rat_selecc = params[:ratings]
     @movies = Movie.rated_and_ordered params[:ratings], params[:format]
 
-    flash[:notice] = @rat_selecc
   end
 
 
