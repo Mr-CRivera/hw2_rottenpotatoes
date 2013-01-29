@@ -12,5 +12,15 @@
 
   = label :movie, :release_date, 'Released On'
   = date_select :movie, :release_date
+  
+  = label :movie, :description, 'Description'
+  = text_area :movie, 'description', :rows => 5
 
-  = submit_tag 'Update Movie Info'
+  .actions
+    .action
+      = submit_tag 'Update Movie Info', :class => 'button_action'
+      
+      
+.navigations
+  .navigate
+    = link_to 'Back to movie list', movies_path

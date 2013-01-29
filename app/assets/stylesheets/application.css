@@ -15,6 +15,7 @@ a {
   color: maroon;
   text-decoration: underline;
   font-weight: bold;
+  vertical-align: inherit;
 }
 h1 {
   color: maroon;
@@ -52,9 +53,18 @@ table#movies th.hilite {
   background-color: yellow;
 }
 #notice #warning {
-  background: rosybrown;
   margin: 1em 0;
   padding: 4px;
+  box-shadow: 0px 0px 9px rosybrown; 
+  color: rosybrown; 
+  text-shadow: 0.1em 0.1em 0.2em rosybrown;
+}
+.message {
+  margin: 1em 0;
+  padding: 4px;
+  box-shadow: 0px 0px 9px rosybrown; 
+  color: rosybrown; 
+  text-shadow: 0.1em 0.1em 0.2em rosybrown;
 }
 form label {
   display: block;
@@ -62,5 +72,47 @@ form label {
   font-weight: bold;
   color: maroon;
 }
+input.button_action {
+  vertical-align: -50%;
+}
+p#description {
+  padding: 5px;
+}
+.actions {
+  display: block;
+  clear: both;
+  float: none;
+  height: 4ex;
+  border-left: 5px solid gold;
+  border-right: 5px solid gold;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid gold;
+  background: gold;
+  margin: 5px 0;
+}
+.action {
+  display:block;
+  float: left;
+  margin: 0 10px 0 0;
+  height: 4ex;
+  vertical-align: -50%;
+}
+.navigations {
+  display: block;
+  clear:both;
+  float:none;
+  height: 4ex;
+  background-color: orange;
+  color: white;
+  border-top: 4px solid gold;
+  margin-top: 10px;
 
+}
+.navigate {
+  display:block;
+  float: left;
+  margin: 0 5px;
+  height: 4ex;
+  vertical-align: -50%;
+}
 

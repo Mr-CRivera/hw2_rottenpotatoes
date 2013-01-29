@@ -1,6 +1,8 @@
 class Movie < ActiveRecord::Base
 
+  # ================================================================
    def Movie.ratings
+      #obtengo los rating distintos existentes en BDD
       movies = Movie.select "DISTINCT rating"
       ratings = []
       movies.each do |movie|
@@ -9,7 +11,9 @@ class Movie < ActiveRecord::Base
       return ratings
    end #ratings
 
+  # ================================================================
    def Movie.rated_and_ordered (rat_selecc, ord)
+      #obtengo las películas que contienen los rating pasados ordenadas
       w = ""
       if rat_selecc==nil then rat_selecc = {} end
       rat_selecc.keys.each do |rat|
@@ -18,4 +22,7 @@ class Movie < ActiveRecord::Base
       end #each
       Movie.where(w).order(ord)
    end #rated_and_ordered
+   
+   # ================================================================
+   # ================================================================
 end
