@@ -15,7 +15,14 @@ class MoviesController < ApplicationController
     end
     
     @all_ratings = Movie.ratings
-    @rat_selecc = params[:ratings]
+    if params[:ratings] == nil
+      @rat_selecc = {}
+      @all_ratings.each do |rat|
+        @rat_selecc[rat] = 1
+      end #each
+    else
+      @rat_selecc = params[:ratings]
+    end #else
     @movies = Movie.rated_and_ordered params[:ratings], params[:format]
 
   end
